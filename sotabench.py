@@ -6,7 +6,7 @@ evaluator = ImageNetEvaluator(
     paper_arxiv_id='1506.01497'
 )
 
-predictions = ... # use your model to make predictions
+predictions = dict(zip(image_ids, batch_output)) # use your model to make predictions
 
 evaluator.add(predictions)
 evaluator.save()
